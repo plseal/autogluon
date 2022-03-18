@@ -780,6 +780,9 @@ class TabularPredictor:
             num_bag_folds=num_bag_folds, num_bag_sets=num_bag_sets, num_stack_levels=num_stack_levels,
             time_limit=time_limit, auto_stack=auto_stack, num_train_rows=len(train_data),
         )
+        logger.log(20, f'====num_bag_folds:{num_bag_folds}')
+        logger.log(20, f'====num_bag_sets:{num_bag_sets}')
+        logger.log(20, f'====num_stack_levels:{num_stack_levels}')
 
         if holdout_frac is None:
             holdout_frac = default_holdout_frac(len(train_data),
