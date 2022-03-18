@@ -706,6 +706,7 @@ class TabularPredictor:
         kwargs = self._validate_fit_kwargs(kwargs)
 
         verbosity = kwargs.get('verbosity', self.verbosity)
+        verbosity = 3
         set_logger_verbosity(verbosity)
 
         if presets:
