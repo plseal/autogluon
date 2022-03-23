@@ -101,6 +101,7 @@ class CVSplitter:
         self.groups = groups
         if splitter_cls is None:
             splitter_cls = self._get_splitter_cls()
+        logger.log(20, f'splitter_cls:{splitter_cls}')
         self._splitter = self._get_splitter(splitter_cls)
 
     def _get_splitter_cls(self):

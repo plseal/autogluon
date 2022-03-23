@@ -169,6 +169,7 @@ class LGBModel(AbstractModel):
                 train_params['params']['metric'] = f'{train_params["params"]["metric"]},{stopping_metric}'
         if self.problem_type == SOFTCLASS:
             train_params['fobj'] = lgb_utils.softclass_lgbobj
+        logger.log(15, f"\t============ seed_val:{seed_val}")
         if seed_val is not None:
             train_params['params']['seed'] = seed_val
             random.seed(seed_val)
