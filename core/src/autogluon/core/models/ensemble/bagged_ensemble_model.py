@@ -167,6 +167,7 @@ class BaggedEnsembleModel(AbstractModel):
             n_repeat_start=n_repeat_start,
             groups=groups,
         )
+        logger.log(20, f'k_fold:{k_fold}')
         if k_fold_end is None:
             k_fold_end = k_fold
 
