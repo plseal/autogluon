@@ -445,9 +445,11 @@ class BaggedEnsembleModel(AbstractModel):
             n_repeat_start=n_repeat_start,
             n_repeat_end=n_repeats,
         )
-        logger.log(20, f'fold_fit_args_list:{fold_fit_args_list}')
+        
 
         fold_fit_args_list = [dict(fold_ctx=fold_ctx) for fold_ctx in fold_fit_args_list]
+
+        logger.log(20, f'fold_fit_args_list:{fold_fit_args_list}')
 
         oof_pred_proba, oof_pred_model_repeats = self._construct_empty_oof(X=X, y=y)
         models = []
