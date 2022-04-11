@@ -445,6 +445,7 @@ class BaggedEnsembleModel(AbstractModel):
             n_repeat_start=n_repeat_start,
             n_repeat_end=n_repeats,
         )
+        logger.log(20, f'fold_fit_args_list:{fold_fit_args_list}')
 
         fold_fit_args_list = [dict(fold_ctx=fold_ctx) for fold_ctx in fold_fit_args_list]
 
